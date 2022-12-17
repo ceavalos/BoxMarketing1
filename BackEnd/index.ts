@@ -1,7 +1,7 @@
 import express from 'express';
 
 //definicion de rutas
-import test from './routes/test'
+import test from './database/base'
 
 const app = express();
 
