@@ -5,6 +5,14 @@ import express from 'express';
 import resultado from '../helpers/multiplicar'
 import  { Sequelize, QueryTypes } from 'sequelize'
 
+dotenv.config();
+
+declare var process : {
+  env: {
+    NODE_ENV: string
+  }
+}
+
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialectOptions: {
     ssl: {
@@ -48,4 +56,4 @@ const main = async () => {
 }
 */
 
-export default test
+export  {test}
