@@ -1,0 +1,33 @@
+
+Clave de GitHutb para psuh
+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
+
+
+--Conectandome a Elephant, Postgress
+
+conectandome a Elephant 
+sudo psql -h 	peanut.db.elephantsql.com -p 5432 -U soulnrsy soulnrsy 
+
+sudo psql postgres://soulnrsy:GsFZRNJJ9IRr2gCLaW53484ufkbS-rtR@peanut.db.elephantsql.com/soulnrsy
+
+clave
+GsFZRNJJ9IRr2gCLaW53484ufkbS-rtR
+
+SELECT version();  
+
+listado de tablas
+\d
+
+salir
+\o
+
+
+-----
+creacion de tabla temporal
+
+CREATE TABLE notes (
+    id SERIAL PRIMARY KEY,
+    content text NOT NULL,
+    important boolean,
+    date time
+);

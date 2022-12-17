@@ -1,14 +1,16 @@
 import express from 'express';
-import resultado from '../helpers/multiplicar';
+import resultado from '../helpers/multiplicar'
+import sequelize from '../base/base'
+import  {  QueryTypes }   from 'sequelize'
 
-const app = express();
+const test = express();
 
 
-app.get('/ping', (_req, _res) => {
+test.get('/ping', (_req, _res) => {
     _res.send('pong');
   });
   
-  app.get('/multiplicar/:par1/:par2', (_req, _res) => {
+  test.get('/multiplicar/:par1/:par2', (_req, _res) => {
       console.log(_req.params)
       const par1= Number(_req.params.par1)
       const par2= Number(_req.params.par2)
@@ -16,4 +18,9 @@ app.get('/ping', (_req, _res) => {
       _res.json(respuesta);
     });
 
-    export default app;
+    test.get('/notes', async (_req,  _res) => {
+        const notes = await sequelize.query("SELECT * FROM notes", { type: QueryTypes.SELECT })
+        _res.json(notes)
+      })
+
+    export default test;
