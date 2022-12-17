@@ -1,6 +1,6 @@
 import express from 'express';
 import resultado from '../helpers/multiplicar'
-import sequelize from '../base/base'
+import sequelize from '../database/base.js'
 import  {  QueryTypes }   from 'sequelize'
 
 const test = express();
