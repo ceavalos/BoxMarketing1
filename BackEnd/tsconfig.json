@@ -1,15 +1,22 @@
 {
   "compilerOptions": {
+    
+    "target": "ES2020",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "useUnknownInCatchVariables":false, 
+    "esModuleInterop": true, 
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "strictBindCallApply": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "esModuleInterop": true,
     "declaration": true, 
+    "moduleResolution": "Node", 
+    "resolveJsonModule": true,
   }
 }

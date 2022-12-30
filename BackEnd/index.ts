@@ -1,15 +1,44 @@
-import express from 'express';
+import * as dotenv from 'dotenv' 
 
-//definicion de rutas
-import test from './database/base'
+import express from 'express';
+import upload from './service/uploads'
+import serv from './service/test'
+
+const router = require('./controllers/notes')
+const Webhook = require('./controllers/webhook')
+const cors = require('cors');
+
+
+dotenv.config()
 
 const app = express();
+const bodyParser    = require('body-parser');
 
-//usando la ruta
-app.use(test)
+app.use(cors());
 
-const PORT = 3003;
+//usando Json en cuerpos
+// app.use(express.json());
+app.use(bodyParser.json())
+
+// Servicio de carga de archivo
+app.use('/upload', upload)
+
+// servicios helpers de prueba
+app.use('/test', serv)
+
+// servicios helpers de prueba
+app.use('/note', router)
+
+// servicios helpers de prueba
+app.use('/webhook', Webhook)
+
+app.post('/', (req, res) => {
+  console.log(req.body);
+  res.send('Data received');
+})
+
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-});
+})
