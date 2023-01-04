@@ -30,38 +30,11 @@ router.post('/:idmodulo', urlencodedParser, async (req, res) => {
   }
   // return res.send('Data received')
 })
-
+/*
 router.get('/', async (req, res) => {
   const webhook = await Webhook.findAll()
   res.json(webhook)
 })
-
-/*
-router.post('/:idmodulo', async (req, res) => {
-  try {
-    // console.log('req.body= ' + req.body)
-    console.log(' req= ' + JSON.parse(req))
-    // console.log(' xxx2= ' + JSON.stringify(req.body))
-    const contenido = JSON.stringify(req.body)
-    const contenido2 = '\'' + contenido + '\''
-    console.log('contenido2=' + contenido2)
-
-    const data = {
-      content: contenido2,
-      estado: 'P',
-      modulo: req.params.idmodulo
-    }
-    const dataproceso = JSON.stringify(data)
-    console.log(dataproceso)
-    // const webhook = await Webhook.create(req.body)
-    const webhook = await Webhook.create(data)
-    // sequelize.close(webhook)
-    res.json(webhook)
-  } catch (error) {
-    return res.status(400).json({ error })
-  }
-})
-*/
 
 router.get('/:id', async (req, res) => {
   const webhook = await Webhook.findByPk(req.params.id)
@@ -90,5 +63,5 @@ router.put('/:id', async (req, res) => {
     res.status(404).end()
   }
 })
-
+*/
 module.exports = router
