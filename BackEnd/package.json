@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ts-node": "ts-node",
     "multiplicador": "ts-node multiplicador",
-    "start": "ts-node index.ts",
+    "start": "node build/index.js",
     "dev": "ts-node-dev index.ts"
   },
   "keywords": [],
