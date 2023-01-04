@@ -28,7 +28,7 @@ router.post('/:idmodulo', urlencodedParser, async (req, res) => {
   } catch (error) {
     return res.status(400).json({ error })
   }
-  res.send('Data received')
+  // return res.send('Data received')
 })
 
 router.get('/', async (req, res) => {
