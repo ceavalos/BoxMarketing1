@@ -94,6 +94,11 @@
             "date": 1672862593607,
             "name": "logs\\combinado-2023-01-04-14.log",
             "hash": "7ce74e626f7d7f12d2c3700f966562d4f20c5bbdd6faf0313366dc31f1e71456"
+        },
+        {
+            "date": 1672868391235,
+            "name": "logs\\combinado-2023-01-04-15.log",
+            "hash": "ff2cebe5deb3b63db3973377130ef6c0ad9b3a724f0d81c974bb3c10707f4905"
         }
     ],
     "hashType": "sha256"
