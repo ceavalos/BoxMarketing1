@@ -12,18 +12,19 @@ Webhook.init({
   },
   content: {
     type: DataTypes.TEXT,
-    allowNull: true
+    allowNull: false
   },
   estado: {
     type: DataTypes.TEXT,
-    allowNull: true
+    allowNull: false
   },
   fechagra: {
-    type: DataTypes.DATE
+    type: DataTypes.DATE,
+    defaultValue: Date
   },
   modulo: {
     type: DataTypes.TEXT,
-    allowNull: true
+    allowNull: false
   }
 }, {
   sequelize,
