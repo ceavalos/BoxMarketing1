@@ -24,7 +24,7 @@ router.post('/:idmodulo', urlencodedParser, async (req, res) => {
 
   try {
     const webhook = await Webhook.create(data)
-    res.json(webhook)
+    res.status(200).json(webhook)
   } catch (error) {
     return res.status(400).json({ error })
   }
