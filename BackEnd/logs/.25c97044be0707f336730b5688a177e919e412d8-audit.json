@@ -99,6 +99,16 @@
             "date": 1672868391235,
             "name": "logs\\combinado-2023-01-04-15.log",
             "hash": "ff2cebe5deb3b63db3973377130ef6c0ad9b3a724f0d81c974bb3c10707f4905"
+        },
+        {
+            "date": 1672944764133,
+            "name": "logs\\combinado-2023-01-05-12.log",
+            "hash": "b78bed26456eba1f011ec873c3456dd86a7ebc09843dce98616980c0da2c6da3"
+        },
+        {
+            "date": 1672945218359,
+            "name": "logs\\combinado-2023-01-05-13.log",
+            "hash": "5a9cbc990f6e95c6889813938331eeb093c5b28cf3a35154142e2446f09eabcb"
         }
     ],
     "hashType": "sha256"

@@ -25,6 +25,10 @@ Webhook.init({
   modulo: {
     type: DataTypes.TEXT,
     allowNull: false
+  },
+  formato: {
+    type: DataTypes.TEXT,
+    allowNull: false
   }
 }, {
   sequelize,
